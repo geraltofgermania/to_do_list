@@ -1,0 +1,16 @@
+App view from the terminal:
+
+To Do List
+
+Current To Do's:
+    Item 1
+    Item 2
+    Item 3
+
+>>> command line
+
+We will implement the following features:
+    add item
+    remove item
+    mark as complete
+    
