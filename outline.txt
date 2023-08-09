@@ -14,3 +14,4 @@ We will implement the following features:
     remove item
     mark as complete
     
+We will then add persistance using CSV or JSON files.
