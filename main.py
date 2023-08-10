@@ -5,7 +5,7 @@ def home():
     """
     show the current time
     list all the current to do's
-    may list completed to do's
+    may list completed to do's???
     """
     pass
 
