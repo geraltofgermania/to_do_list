@@ -12,6 +12,8 @@ def home():
 def main():
     print(f"{Fore.BLUE}To Do List\n")
 
+    home()
+
     #reset terminal colors
     print(Fore.RESET)
 if __name__ == "__main__":
