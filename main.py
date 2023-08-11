@@ -2,10 +2,23 @@ import sys
 from colorama import Fore, Style
 import datetime
 import calendar
+import json
 
 # global variables
 to_do = []
 completed =[]
+
+def save():
+    pass
+
+def load():
+    try:
+        with open('data.json', 'r') as saved_file:
+            data = json.load(saved_file)
+            to_do.extend(data.get('to_do', []))
+            completed.extend(data.get('completed', []))
+    except FileNotFoundError:
+        print("No saved data was found")
 
 def set_complete():
     if to_do:
