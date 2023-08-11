@@ -9,7 +9,16 @@ to_do = []
 completed =[]
 
 def save():
-    pass
+    try:
+        save_data = {
+        'to_do': to_do,
+        'completed': completed
+        }
+
+        with open('data.json', 'w') as saved_file:
+            json.dump(save_data, saved_file)
+    except:
+        print("File cannot be saved.")
 
 def load():
     try:
@@ -99,6 +108,7 @@ def home():
         list_to_do()
         command = input(">>> ")
         if command == "q":
+            save()
             break
         elif command == "n":
             create_to_do()
@@ -131,6 +141,10 @@ def main():
     # print today's date
     print(f"Today's date {today}\n")
 
+    # load saved file
+    load()
+
+    # help command and call home function
     print("Type 'h' for available commands.\n")
     home()
 
