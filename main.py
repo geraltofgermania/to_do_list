@@ -1,5 +1,7 @@
 import sys
 from colorama import Fore
+import datetime
+import calendar
 
 def home():
     """
@@ -10,7 +12,22 @@ def home():
     pass
 
 def main():
-    print(f"{Fore.BLUE}To Do List\n")
+    print(f"{Fore.GREEN}To Do List\n")
+
+    # today's date as a string
+    date = datetime.date
+    today = date.today()
+
+    # get individual date members for calendar
+    deconstructed_date = str(today).split("-")
+
+    # print this month's calendar
+    my_calendar = calendar.TextCalendar()
+    text_calendar = my_calendar.formatmonth(int(deconstructed_date[0]), int(deconstructed_date[1]))
+    print(text_calendar)
+
+    # print today's date
+    print(f"Today's date {date.today()}")
 
     home()
 
