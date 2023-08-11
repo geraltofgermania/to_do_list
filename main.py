@@ -3,6 +3,10 @@ from colorama import Fore
 import datetime
 import calendar
 
+# global variables
+to_do = []
+completed =[]
+
 def home():
     """
     show the current time
